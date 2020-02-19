@@ -37,7 +37,7 @@ end
 
 
 
-
+#=
 function LaplaceSmoothing(ρ, θ, m, n)
 
     α = zeros(m, n)
@@ -74,3 +74,4 @@ function LaplaceSmoothing(ρ, θ, m, n)
 
 end
 
+=#

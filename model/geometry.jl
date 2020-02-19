@@ -3,6 +3,7 @@
 #Pkg.add("PyPlot")
 #include("tfi.jl")
 include("TFI.jl")
+include("EllipticGridGeneration.jl")
 using Plots
 
 r = 1
@@ -10,11 +11,14 @@ D = 5
 L = 5
 ϕ = atan(D/L)
 
-ξ = 0:0.1: 1
-η = 0:0.1: 1
+h = 0.1
+ξ = 0:h: 1
+η = 0:h: 1
 
 n = length(ξ)
 m = length(η)
+
+
 
 R = sqrt(D^2 + L^2)
 
@@ -147,7 +151,7 @@ end
 
 
 
-for t = 1:500
+for t = 1:1000
 
     # Conditions for block A, upper block
 
@@ -198,7 +202,7 @@ for t = 1:500
 
 end
 
-
+#savefig("tfi_elliptic_grid.png")
 
 
 
